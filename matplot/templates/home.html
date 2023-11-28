@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matplot</title>
+    <style>
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <img src="data:image/png;base64,{{ data }}" alt="" height="500" width="600">
+        <form method="post" style="padding-top: 50px;">
+            {% csrf_token %}
+            <!-- <label for="matdata">Matadata: </label>
+            <input type="text" name="matdata" id="matdata"> -->
+            <label for="matdata">P0: </label>
+            <input type="text" name="p0" id="p0"><br>
+            <label for="matdata">D0: </label>
+            <input type="text" name="d0" id="d0"><br>
+            <label for="matdata">T0: </label>
+            <input type="text" name="t0" id="t0"><br>
+            <label for="matdata">N0: </label>
+            <input type="text" name="n0" id="n0"><br>
+            <input type="submit" value="Graph">
+            <!-- <h1>You have entered {{ matdatacheck }}</h1> -->
+            <h1>P0: {{ p0_data }}</h1>
+            <h1>D0: {{ d0_data }}</h1>
+            <h1>T0: {{ t0_data }}</h1>
+            <h1>N0: {{ n0_data }}</h1>
+        </form>
+    </div>
+</body>
+</html>
