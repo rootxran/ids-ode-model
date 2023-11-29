@@ -41,7 +41,11 @@ def home(request):
 
 
     t = np.linspace(0, 10, 100)
-    N_t = (P0 - D0) / T0 * t + N0
+    print("P0: ", P0)
+    print("D0: ", D0)
+    print("T0: ", T0)
+    print("N0: ", N0)
+    N_t = ((P0 - D0) / T0) * t + N0
 
     # plt.plot(range(10))
     plt.figure(figsize=(10, 6))
@@ -58,6 +62,7 @@ def home(request):
     buf.seek(0)
     string = base64.b64encode(buf.read())
     uri = urllib.parse.quote(string)
-    return render(request, 'home.html', {'data':uri, 'p0_data':P0, 'd0_data': D0, 't0_data': T0, 'n0_data': N0})
+    M = "%.2f" % float((P0-D0)/T0)
+    return render(request, 'home.html', {'data':uri, 'p0_data':P0, 'd0_data': D0, 't0_data': T0, 'n0_data': N0, 'M':M})
 
 # Create your views here.

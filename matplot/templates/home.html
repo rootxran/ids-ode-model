@@ -8,30 +8,49 @@
         input {
             margin-bottom: 10px;
         }
+        label {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input {
+            height: 25px;
+        }
     </style>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 </head>
 <body>
+    <h1 style="text-align: center; font-size: 50px; font-weight: bold;">IDS Model Visualization</h1>
     <div style="display: flex;">
-        <img src="data:image/png;base64,{{ data }}" alt="" height="500" width="600">
-        <form method="post" style="padding-top: 50px;">
+        <img src="data:image/png;base64,{{ data }}" alt="" height="600" width="700">
+        <form method="post" style="padding-top: 50px; flex-grow: 1; padding-left: 100px;">
             {% csrf_token %}
             <!-- <label for="matdata">Matadata: </label>
             <input type="text" name="matdata" id="matdata"> -->
-            <label for="matdata">P0: </label>
-            <input type="text" name="p0" id="p0"><br>
-            <label for="matdata">D0: </label>
-            <input type="text" name="d0" id="d0"><br>
-            <label for="matdata">T0: </label>
-            <input type="text" name="t0" id="t0"><br>
-            <label for="matdata">N0: </label>
-            <input type="text" name="n0" id="n0"><br>
-            <input type="submit" value="Graph">
+            <div style="display: flex;">
+                <div>
+                    <label for="matdata">P<sub>0</sub>:</label>
+                    <input type="text" name="p0" id="p0"><br>
+                    <label for="matdata">D<sub>0</sub>:</label>
+                    <input type="text" name="d0" id="d0"><br>
+                    <label for="matdata">T&nbsp;&nbsp;:</label>
+                    <input type="text" name="t0" id="t0"><br>
+                    <label for="matdata">N<sub>0</sub>:</label>
+                    <input type="text" name="n0" id="n0"><br>
+                </div>
+                <input type="submit" value="Graph" style="margin: 20px 0;height: 80px; width: 200px; font-size: 30px; float: right;margin: 20px 0; align-self: center; margin-left: 50px; background-color: orange; border: solid black 3px; border-radius: 20px; cursor: pointer;">
+            </div>
             <!-- <h1>You have entered {{ matdatacheck }}</h1> -->
-            <h1>P0: {{ p0_data }}</h1>
-            <h1>D0: {{ d0_data }}</h1>
-            <h1>T0: {{ t0_data }}</h1>
-            <h1>N0: {{ n0_data }}</h1>
+            <div style="background-color: cyan; width: 900px; padding: 10px; border: solid black 5px; border-radius: 20px; margin-top: 30px;">
+                <h1>P<sub>0</sub> (Constant rate of incoming packets): {{ p0_data }}</h1>
+                <h1>D<sub>0</sub> (Constant rate of outgoing packets): {{ d0_data }}</h1>
+                <h1>T&nbsp; &nbsp;(Constant for Total Traffic Capacity): {{ t0_data }}</h1>
+                <h1>N<sub>0</sub> (Initial number of packets at time 0): {{ n0_data }}</h1>
+            </div>
         </form>
     </div>
+
+    <h1 style="height: 100px; padding-top: 20px; text-align: center; font-size: 60px; background-color: yellow; border: solid black 5px; border-radius: 30px; margin: 50px 500px;">\( \frac{dp}{dt} \) = {{ M }}t + {{ n0_data }}</h1>
 </body>
 </html>
