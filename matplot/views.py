@@ -17,26 +17,21 @@ def home(request):
     if P0 is not None:
         P0 = int(P0)
     else:
-        # Handle the case where 'p0' is not present in the POST data
-        # You might want to set a default value or show an error message
         P0 = 30
 
     if D0 is not None:
         D0 = int(D0)
     else:
-        # Handle the case where 'd0' is not present in the POST data
         D0 = 20
 
     if T0 is not None:
         T0 = int(T0)
     else:
-        # Handle the case where 't0' is not present in the POST data
         T0 = 15
 
     if N0 is not None:
         N0 = int(N0)
     else:
-        # Handle the case where 'n0' is not present in the POST data
         N0 = 10
 
 
