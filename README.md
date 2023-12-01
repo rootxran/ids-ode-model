@@ -9,6 +9,9 @@ $\frac{dN}{dt}$ = $\frac{P(t)}{T}$ - $\frac{D(t)}{T}$
   <li><i>t</i> shows time</li>  
 </ul>
 
+## 💻 Tech Stack:
+[![](https://skillicons.dev/icons?i=python,django,)](https://rootxran.com/)<br/>
+
 ## Setup
 
 ```bash
