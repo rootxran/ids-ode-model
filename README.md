@@ -28,3 +28,4 @@ python3 manage.py runserver
 
 ![image](https://github.com/rootxran/ids_matplot/assets/97831313/54c1d8ae-c027-4eeb-8019-a33b6b42a4dc)
 
+And one last request! [Please star this repo](https://github.com/rootxran/ids-ode-model). It helps the project be more discoverable.
