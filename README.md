@@ -3,7 +3,8 @@
 $\frac{dN}{dt}$ = $\frac{P(t)}{T}$ - $\frac{D(t)}{T}$
 <ul>
   <li><i>N</i> shows number of packets in network</li>
-  <li><i>P</i> shows rate of incoming packets</li>
+  <li><i>P(t)</i> shows rate of incoming packets</li>
+  <li><i>D(t)</i> show rate of defected (malicious) packets</li>
   <li><i>T</i> shows total network capacity</li>
   <li><i>t</i> shows time</li>  
 </ul>
