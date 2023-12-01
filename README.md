@@ -11,11 +11,13 @@ $\frac{dN}{dt}$ = $\frac{P(t)}{T}$ - $\frac{D(t)}{T}$
 ## Setup
 
 ```bash
-git clone https://github.com/rootxran/ids_matplot.git
-cd id_matplot
+git clone https://github.com/rootxran/ids-ode-model.git
+cd ids-ode-model
 pip3 install -r requirements.txt
 python3 manage.py runserver
 ```
+
+`http://127.0.0.1:8000/`
 
 ## UI
 
